@@ -1,6 +1,5 @@
-flask
-line-bot-sdk
-requests
-gunicorn
-yt-dlp
-ffmpeg-python
+flask==2.3.3
+line-bot-sdk==2.4.1
+requests==2.31.0
+gunicorn==21.2.0
+yt-dlp==2023.11.16
