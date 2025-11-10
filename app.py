@@ -42,7 +42,7 @@ def handle_message(event):
     try:
         # 注意: ここは後であなたのパソコンのURLに変更
         response = requests.post(
-            "http://192.168.159.1:5000/process",
+            "http://192.168.0.101:5000/process",
             json={'song_name': user_message, 'user_id': user_id},
             timeout=3
         )
