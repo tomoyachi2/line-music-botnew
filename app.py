@@ -92,3 +92,18 @@ if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     print(f"🚀 通知Botを起動しました！ポート: {port}")
     app.run(host='0.0.0.0', port=port, debug=False)
+
+@app.route("/notify", methods=['POST'])
+def handle_notification():
+    """自宅パソコンからの通知を受信"""
+    try:
+        data = request.json
+        user_id = data['user_id']
+        message = data['message']
+        
+        # ユーザーに結果を通知
+        line_bot_api.push_message(user_id, TextSendMessage(text=message))
+        return jsonify({'status': 'success'})
+    except Exception as e:
+        print(f"通知エラー: {e}")
+        return jsonify({'status': 'error'})
