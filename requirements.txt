@@ -1,12 +1,4 @@
-services:
-  - type: web
-    name: line-music-bot
-    env: python
-    plan: free
-    buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn app:app
-    envVars:
-      - key: LINE_TOKEN
-        value: your_channel_access_token_here
-      - key: LINE_SECRET  
-        value: your_channel_secret_here
+sflask==2.3.3
+line-bot-sdk==2.4.1
+requests==2.31.0
+gunicorn==21.2.0
