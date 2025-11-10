@@ -15,7 +15,7 @@ line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
 # ⚠️ ここは後で実際のユーザーIDに変更
-BROTHER_USER_ID = "あなたのユーザーID"
+BROTHER_USER_ID = "Ud6397562b006c04dbf34e0cddc8f0382"
 
 @app.route("/")
 def home():
